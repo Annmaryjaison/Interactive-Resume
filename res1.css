@@ -1,0 +1,366 @@
+/* General Body & Typography */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    margin: 0;
+    padding: 30px; /* More padding around content */
+    background-color: #50484d; /* Lighter, calming background */
+    color: #333;
+    line-height: 1.7; /* Slightly increased line height for readability */
+    font-size: 16px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #2c3e50;
+    color: #1e697b;
+    padding: 30px 0; /* More vertical padding */
+    border-radius: 12px; /* Softer rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    margin-top: 25px; /* Adjust spacing */
+    margin-bottom: 15px;
+    font-weight: 600; /* Slightly bolder headings */
+}
+
+header h1 {
+    color: #ecf0f1;
+    font-size: 2.8em; /* Larger main title */
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Container Layout */
+.resume-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* Increased gap between columns */
+    max-width: 1300px; /* Slightly wider container */
+    margin: 0 auto;
+}
+
+.input-form, .resume-display {
+    background-color: #fff;
+    padding: 30px; /* More internal padding */
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    flex: 1;
+    min-width: 320px; /* Ensure responsiveness */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effects */
+}
+
+.input-form:hover, .resume-display:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.input-form {
+    border-left: 6px solid #3498db; /* Thicker, more prominent border */
+}
+
+.resume-display {
+    border-right: 6px solid #2ecc71; /* Thicker, more prominent border */
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 20px; /* More space between form elements */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px; /* Space between label and input */
+    font-weight: 600; /* Bolder labels */
+    color: #555;
+    font-size: 0.95em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="url"],
+.form-group textarea {
+    width: calc(100% - 24px); /* Account for padding */
+    padding: 12px; /* More padding in inputs */
+    border: 1px solid #cce7f0; /* Lighter border color */
+    border-radius: 8px; /* Softer input corners */
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3498db; /* Highlight on focus */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2); /* Soft focus glow */
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px; /* Minimum height for text areas */
+}
+
+/* Button Styles */
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px; /* More padding */
+    border: none;
+    border-radius: 8px; /* Softer button corners */
+    cursor: pointer;
+    font-size: 1.05rem; /* Slightly larger font */
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth hover and click */
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button:active {
+    transform: translateY(0); /* "Press" effect on click */
+}
+
+.add-button {
+    background-color: #2ecc71;
+    margin-right: 15px; /* More space between buttons */
+    padding: 10px 20px; /* Slightly smaller for add buttons */
+    font-size: 0.95rem;
+}
+
+.add-button:hover {
+    background-color: #27ae60;
+}
+
+.generate-button {
+    background-color: #e67e22;
+    width: 100%;
+    padding: 18px; /* Larger generate button */
+    font-size: 1.2rem;
+    margin-top: 30px;
+    margin-bottom: 10px; /* Space below generate button */
+}
+
+.generate-button:hover {
+    background-color: #d35400;
+}
+
+.download-button {
+    background-color: #9b59b6; /* A pleasant purple */
+    margin-top: 10px;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+.download-button:hover {
+    background-color: #8e44ad;
+}
+
+/* Resume Display Styles */
+.resume-display h3 {
+    border-bottom: 2px solid #e0e0e0; /* Lighter border */
+    padding-bottom: 8px;
+    margin-bottom: 20px; /* More space below heading */
+    color: #34495e;
+    font-size: 1.5em; /* Larger section titles */
+}
+
+.resume-item {
+    margin-bottom: 25px; /* More space between resume items */
+    padding-left: 10px; /* Indent for better structure */
+    border-left: 3px solid #f0f8ff; /* Subtle line for visual separation */
+}
+
+.resume-item h4 {
+    margin: 0;
+    color: #444;
+    font-size: 1.2em; /* Larger job/degree titles */
+    font-weight: 600;
+}
+
+.resume-item p {
+    margin: 5px 0 0 0; /* Adjust spacing */
+    font-size: 0.98em;
+    color: #666;
+}
+
+.resume-item ul {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.resume-item ul li {
+    position: relative; /* For custom bullet point */
+    margin-bottom: 8px;
+    padding-left: 20px; /* Space for custom bullet */
+    font-size: 0.95em;
+    color: #555;
+}
+
+.resume-item ul li::before {
+    content: '•'; /* Custom bullet point */
+    position: absolute;
+    left: 0;
+    color: #3498db; /* Blue bullet */
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+#personal-info-display h3 {
+    font-size: 2em; /* Larger name */
+    text-align: center;
+    border-bottom: none; /* No border for name */
+    margin-bottom: 10px;
+}
+
+#personal-info-display p {
+    text-align: center;
+    font-size: 1.05em;
+    margin: 3px 0;
+    color: #444;
+}
+
+#personal-info-display a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#personal-info-display a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+#display-skills {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox for skills */
+    flex-wrap: wrap;
+    gap: 10px; /* Space between skill tags */
+}
+
+#display-skills li {
+    background-color: #ecf0f1;
+    padding: 8px 15px; /* More padding */
+    border-radius: 20px; /* Pill-shaped tags */
+    font-size: 0.9em;
+    color: #555;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    border: 1px solid #ddd; /* Subtle border for tags */
+}
+
+#display-skills li:hover {
+    background-color: #dbe4e6;
+    transform: translateY(-2px);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-section {
+    opacity: 0; /* Hidden by default */
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+#personal-info-display { animation-delay: 0.2s; }
+#summary-display { animation-delay: 0.4s; }
+#education-display { animation-delay: 0.6s; }
+#experience-display { animation-delay: 0.8s; }
+#skills-display { animation-delay: 1s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    .resume-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .input-form, .resume-display {
+        min-width: unset;
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 2.2em;
+    }
+    .generate-button, .download-button {
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
+
+/* Print/PDF Specific Styles */
+@media print {
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: #fff;
+        -webkit-print-color-adjust: exact !important; /* For accurate color printing */
+        print-color-adjust: exact !important;
+    }
+    .input-form, header, .download-button, .generate-button, .add-button {
+        display: none; /* Hide input form, header, and buttons in print */
+    }
+    .resume-container {
+        display: block; /* Stack content for print */
+        max-width: 100%;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+    .resume-display {
+        width: 100%;
+        padding: 20px; /* Add some padding for the print version */
+        margin: 0;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+    }
+    /* Disable animations and ensure visibility for print */
+    .animated-section {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    h1, h2, h3, h4, p, li {
+        color: #000 !important; /* Ensure black text for print */
+    }
+    .resume-display h3 {
+        border-bottom: 1px solid #ddd; /* Lighter border for print */
+    }
+    .resume-item {
+        border-left: none; /* Remove border for print */
+    }
+    .resume-item ul li::before {
+        color: #000 !important; /* Black bullets for print */
+    }
+    #display-skills li {
+        background-color: #fff !important; /* White background for skills */
+        border: 1px solid #eee !important;
+        color: #000 !important;
+    }
+}

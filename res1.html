@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="res1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS9MtfdkSjFQjS8xS9KPyn4laGOJxCm2ssdm+4NpLCGxUNolAesPf3EFhBFWgoPTUgsKukeyA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <header>
+        <h1>Interactive Resume Builder</h1>
+        <p>Enter your details below to create your resume!</p>
+    </header>
+
+    <main class="resume-container">
+        <section class="input-form">
+            <h2>Your Details</h2>
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label for="title">Professional Title:</label>
+                <input type="text" id="title" placeholder="Software Developer">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="your.email@example.com">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" placeholder="(123) 456-7890">
+            </div>
+            <div class="form-group">
+                <label for="linkedin">LinkedIn Profile:</label>
+                <input type="url" id="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+            </div>
+            <div class="form-group">
+                <label for="summary">Professional Summary:</label>
+                <textarea id="summary" rows="5" placeholder="A brief overview of your skills and experience..."></textarea>
+            </div>
+
+            <h3>Education</h3>
+            <div id="education-inputs">
+                <div class="education-item form-group">
+                    <label for="degree1">Degree:</label>
+                    <input type="text" id="degree1" placeholder="B.Sc. Computer Science">
+                    <label for="university1">University:</label>
+                    <input type="text" id="university1" placeholder="Any University">
+                    <label for="gradYear1">Graduation Year:</label>
+                    <input type="text" id="gradYear1" placeholder="2023">
+                </div>
+            </div>
+            <button class="add-button" onclick="addEducationField()">Add More Education</button>
+
+            <h3>Work Experience</h3>
+            <div id="experience-inputs">
+                <div class="experience-item form-group">
+                    <label for="jobTitle1">Job Title:</label>
+                    <input type="text" id="jobTitle1" placeholder="Junior Developer">
+                    <label for="company1">Company:</label>
+                    <input type="text" id="company1" placeholder="Tech Solutions Inc.">
+                    <label for="startDate1">Start Date:</label>
+                    <input type="text" id="startDate1" placeholder="Jan 2023">
+                    <label for="endDate1">End Date:</label>
+                    <input type="text" id="endDate1" placeholder="Present">
+                    <label for="jobDesc1">Job Responsibilities:</label>
+                    <textarea id="jobDesc1" rows="3" placeholder="- Developed web applications
+- Collaborated with team"></textarea>
+                </div>
+            </div>
+            <button class="add-button" onclick="addExperienceField()">Add More Experience</button>
+
+            <h3>Skills (Comma Separated)</h3>
+            <div class="form-group">
+                <label for="skills">Skills:</label>
+                <input type="text" id="skills" placeholder="HTML, CSS, JavaScript, React, Node.js">
+            </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" ></script>
+            <button id="generateResume" class="generate-button">Generate Resume</button>
+            <button id="downloadPdfBtn" class="download-button">Download as PDF</button>
+            <button id="downloadHtmlBtn" class="download-button">Download as HTML</button>
+        </section>
+
+        <section id="resume-content-to-download" class="resume-display">
+            <h2> RESUME </h2>
+            <div id="personal-info-display" class="animated-section">
+                <h3 id="display-name"></h3>
+                <p id="display-title"></p>
+                <p><span id="display-email"></span> | <span id="display-phone"></span></p>
+                <p><a id="display-linkedin" href="#" target="_blank"></a></p>
+            </div>
+
+            <div id="summary-display" class="animated-section">
+                <h3>Professional Summary</h3>
+                <p id="display-summary"></p>
+            </div>
+
+            <div id="education-display" class="animated-section">
+                <h3>Education</h3>
+                </div>
+
+            <div id="experience-display" class="animated-section">
+                <h3>Work Experience</h3>
+                </div>
+
+            <div id="skills-display" class="animated-section">
+                <h3>Skills</h3>
+                <ul id="display-skills">
+                    </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="res1.js"></script>
+</body>
+</html>
